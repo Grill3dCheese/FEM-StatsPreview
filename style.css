@@ -106,15 +106,21 @@ body {
   --content-padding: 1.5rem;
   --content-spacing: 1rem;
 
+  display: grid;
   background-color: var(--clr-primary-600);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
-.info-card__imgOverlay {
-  height: 100%;
-  width: 100%;
-  filter: hue-rotate(25deg);
+@media screen and (min-width: 600px) {
+  .info-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .info-card__imgOverlay {
+    grid-row: 1;
+    grid-column: 2;
+  }
 }
 
 .info-card__content {
