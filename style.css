@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
 :root {
   --clr-primary-800: hsl(233, 47%, 7%);
   --clr-primary-600: hsl(244, 38%, 16%);
@@ -7,14 +9,12 @@
   --clr-neutral-200: hsla(0, 0%, 100%, 0.75);
   --clr-neutral-100: hsl(0, 0%, 100%);
 
-  --ff-accent: font-family: 'Inter', sans-serif;
-  --ff-base: font-family: 'Lexend Deca', sans-serif;
+  --ff-base: "Inter", sans-serif;
+  --ff-accent: "Lexend Deca", sans-serif;
 
   --fw-regular: 400;
   --fw-bold: 700;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
 
 /*
   1. Use a more-intuitive box-sizing model.
@@ -85,48 +85,75 @@ body {
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
   font-size: 0.875rem;
-  color: var(--clr-neutral-200);
+  color: var(--clr-neutral-300);
   background-color: var(--clr-primary-800);
   display: grid;
   place-content: center;
-  margin: 1rem;
+  margin: 1.25rem;
 }
 
 /* ====== Utilities ====== */
 
 .flex-group {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 /* ====== Info Card Styling ====== */
 
 .info-card {
-  --content-padding: 1.5rem;
+  --content-padding: 3rem;
   --content-spacing: 1rem;
 
   display: grid;
   background-color: var(--clr-primary-600);
   border-radius: 0.5rem;
   overflow: hidden;
+  margin: 2rem 0;
 }
 
-@media screen and (min-width: 600px) {
-  .info-card {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .info-card__imgOverlay {
-    grid-row: 1;
-    grid-column: 2;
-  }
+.info-card__img {
+  filter: opacity(0.35) drop-shadow(0 0 0 var(--clr-secondary-100));
 }
 
 .info-card__content {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--content-spacing);
   padding: var(--content-padding);
+  text-align: center;
+}
+
+.info-card__content h1 {
+  color: var(--clr-neutral-100);
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  /* padding-top: 1rem; */
+}
+
+.info-card__content > p:first-of-type {
+  padding-bottom: 1rem;
+}
+
+h1 span {
+  color: var(--clr-secondary-100);
+}
+
+.flex-group > p {
+  font-family: var(--ff-accent);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.flex-group span {
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 1.25rem;
+  font-family: var(--ff-base);
+  text-transform: none;
 }
 
 .attribution {
@@ -135,4 +162,31 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 600px) {
+  .info-card {
+    grid-template-columns: 1fr 1fr;
+    max-width: 56rem;
+  }
+
+  .info-card__imgOverlay {
+    order: 1;
+  }
+
+  .info-card__img img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .info-card__content {
+    justify-content: center;
+    text-align: start;
+    padding: 3rem;
+    gap: 1.5rem;
+  }
+
+  .flex-group {
+    flex-direction: row;
+  }
 }
