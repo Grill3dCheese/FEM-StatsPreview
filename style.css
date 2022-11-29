@@ -121,7 +121,7 @@ body {
   }
 
   25% {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 
   50% {
@@ -160,6 +160,8 @@ h1 span {
   color: var(--clr-secondary-100);
 }
 
+/* ====== Flex Group Styling ====== */
+
 .flex-group > p {
   font-family: var(--ff-accent);
   font-size: 0.7rem;
@@ -175,6 +177,8 @@ h1 span {
   text-transform: none;
 }
 
+/* ====== Footer Styling ====== */
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -182,6 +186,8 @@ h1 span {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+/* ====== Media Queries ====== */
 
 @media screen and (min-width: 600px) {
   .info-card {
