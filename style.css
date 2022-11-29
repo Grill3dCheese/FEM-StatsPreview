@@ -112,6 +112,25 @@ body {
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 2rem 0;
+  animation: 2s scale;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .info-card__img {
