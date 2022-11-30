@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
-
 :root {
   --clr-primary-800: hsl(233, 47%, 7%);
   --clr-primary-600: hsl(244, 38%, 16%);
@@ -157,7 +155,21 @@ body {
 }
 
 h1 span {
-  color: var(--clr-secondary-100);
+  animation: 6s infinite pulsePurple;
+}
+
+@keyframes pulsePurple {
+  0% {
+    color: var(--clr-neutral-100);
+  }
+
+  50% {
+    color: var(--clr-secondary-100);
+  }
+
+  100% {
+    color: var(--clr-neutral-100);
+  }
 }
 
 /* ====== Flex Group Styling ====== */
