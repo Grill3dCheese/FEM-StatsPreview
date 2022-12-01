@@ -15,5 +15,6 @@
 .DS_Store
 .prettierignore
 
-# Avoid adding .md type files, for now
-*.md
+# Avoid adding specific .md type files, for now
+README-info.md
+style-guide.md
