@@ -87,7 +87,7 @@ body {
   background-color: var(--clr-primary-800);
   display: grid;
   place-content: center;
-  margin: 1.25rem;
+  padding: 1.25rem;
 }
 
 /* ====== Utilities ====== */
